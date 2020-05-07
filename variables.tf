@@ -28,3 +28,7 @@ variable "cluster_name" {
 variable kube_version {
   default = "4.3.12_1520_openshift"
 }
+
+variable resource_group_id {
+  default = "64ba520612614c02b4f81fa1840436c7"
+}

@@ -1,3 +1,7 @@
+data ibm_resource_group "resource_group" {
+  name = "dach-rg"
+}
+
 resource "ibm_container_cluster" "cluster" {
   name              = "${var.cluster_name}"
   datacenter        = "${var.datacenter}"
@@ -7,4 +11,5 @@ resource "ibm_container_cluster" "cluster" {
   kube_version      = "${var.kube_version}"
   public_vlan_id    = "${var.public_vlan_id}"
   private_vlan_id   = "${var.private_vlan_id}"
+  resource_group_id = "${var.resource_group_id}"
 }
