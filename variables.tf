@@ -7,21 +7,24 @@ variable "hardware" {
 }
 
 variable "datacenter" {
-  default = "wdc07"
+  default = "fra02"
 }
 
 variable "default_pool_size" {
   default = "3"
 }
 
-variable "private_vlan_id" {}
+variable "private_vlan_id" {
+  default = "2429791"
+}
 
-variable "public_vlan_id" {}
+variable "public_vlan_id" {
+  default = "2429789"
+}
 
 variable "cluster_name" {
-  default = "cluster"
+  default = "cp4a-dach"
 }
 variable kube_version {
-  #default = "3.11.104_openshift"
-  default = "1.14"
+  default = "4.3.12_1520_openshift"
 }

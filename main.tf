@@ -1,5 +1,5 @@
 resource "ibm_container_cluster" "cluster" {
-  name              = "${var.cluster_name}${random_id.name.hex}"
+  name              = "${var.cluster_name}"
   datacenter        = "${var.datacenter}"
   default_pool_size = "${var.default_pool_size}"
   machine_type      = "${var.machine_type}"
@@ -7,8 +7,4 @@ resource "ibm_container_cluster" "cluster" {
   kube_version      = "${var.kube_version}"
   public_vlan_id    = "${var.public_vlan_id}"
   private_vlan_id   = "${var.private_vlan_id}"
-}
-
-resource "random_id" "name" {
-  byte_length = 4
 }
