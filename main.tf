@@ -1,7 +1,3 @@
-data ibm_resource_group "resource_group" {
-  name = "dach-rg"
-}
-
 resource "ibm_container_cluster" "cluster" {
   name              = "${var.cluster_name}"
   datacenter        = "${var.datacenter}"
