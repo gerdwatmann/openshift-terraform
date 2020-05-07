@@ -11,7 +11,7 @@ variable "datacenter" {
 }
 
 variable "default_pool_size" {
-  default = "2"
+  default = "3"
 }
 
 variable "private_vlan_id" {
