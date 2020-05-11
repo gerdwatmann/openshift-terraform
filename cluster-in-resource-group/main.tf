@@ -1,9 +1,9 @@
 # Create a resource group
-resource "ibm_resource_group" "resourceGroup" {
+resource "ibm_resource_group" "bootcamp_rg" {
   name = var.resource_group_name
 }
 
-data "ibm_resource_group" "resource_group" {
+data "ibm_resource_group" "bootcamp_rg" {
   name = var.resource_group_name
 }
 
@@ -14,6 +14,8 @@ resource "ibm_resource_instance" "appid_instance" {
   plan              = "lite"
   location          = "eu-de"
   resource_group_id = data.ibm_resource_group.resource_group.id
+
+  depends_on = [ibm_resource_group.bootcamp_rg]
 }
 
 # Create a cluster in the created resource group
