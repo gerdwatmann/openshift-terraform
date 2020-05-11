@@ -9,7 +9,6 @@ variable "cluster_name" {
 }
 
 variable kube_version {
-  default = "4.3.12_1520_openshift"
 }
 
 variable "machine_type" {
