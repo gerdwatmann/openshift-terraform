@@ -4,15 +4,15 @@ resource "ibm_resource_group" "bootcamp_rg" {
 }
 
 // app id as test resource
-resource "ibm_resource_instance" "appid_instance" {
-  name              = "dach-garage-bootcamp-appid"
-  service           = "appid"
-  plan              = "lite"
-  location          = "eu-de"
-  resource_group_id = ibm_resource_group.bootcamp_rg.id
-
-  depends_on = [ibm_resource_group.bootcamp_rg]
-}
+#resource "ibm_resource_instance" "appid_instance" {
+#  name              = "dach-garage-bootcamp-appid"
+#  service           = "appid"
+#  plan              = "lite"
+#  location          = "eu-de"
+#  resource_group_id = ibm_resource_group.bootcamp_rg.id
+#
+#  depends_on = [ibm_resource_group.bootcamp_rg]
+#}
 
 # Create a cluster in the created resource group
 #resource "ibm_container_cluster" "cluster" {
