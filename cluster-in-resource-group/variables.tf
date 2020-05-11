@@ -9,6 +9,7 @@ variable "cluster_name" {
 }
 
 variable kube_version {
+  default = "4.3.13_1521"
 }
 
 variable "machine_type" {
