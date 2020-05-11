@@ -3,17 +3,13 @@ resource "ibm_resource_group" "bootcamp_rg" {
   name = var.resource_group_name
 }
 
-data "ibm_resource_group" "bootcamp_rg" {
-  name = var.resource_group_name
-}
-
 // app id as test resource
 resource "ibm_resource_instance" "appid_instance" {
   name              = "dach-garage-bootcamp-appid"
   service           = "appid"
   plan              = "lite"
   location          = "eu-de"
-  resource_group_id = data.ibm_resource_group.bootcamp_rg.id
+  resource_group_id = ibm_resource_group.bootcamp_rg.id
 
   depends_on = [ibm_resource_group.bootcamp_rg]
 }
