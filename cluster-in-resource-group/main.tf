@@ -25,6 +25,4 @@ resource "ibm_container_cluster" "cluster" {
   public_vlan_id    = var.public_vlan_id
   private_vlan_id   = var.private_vlan_id
   resource_group_id = ibm_resource_group.bootcamp_rg.id
-
-  depends_on = [ibm_resource_group.bootcamp_rg]
 }
