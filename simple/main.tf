@@ -1,3 +1,9 @@
+# Create the Resource Group
+data "ibm_resource_group" "resource_group" {
+  name = "${var.resource_group_name}"
+}
+
+# Create the Cluster
 resource "ibm_container_cluster" "cluster" {
   name              = "${var.cluster_name}"
   datacenter        = "${var.datacenter}"
